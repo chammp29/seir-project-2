@@ -8,14 +8,20 @@ const MiniatureSchema = new mongoose.Schema({
   material: String,
   notes: String,
   category: [],
+  paintedBy: [
+    {
+      ref: "User",
+      type: mongoose.Schema.Types.ObjectId
+    }
+  ],
   paintsUsed: [
     {
-      ref: "Paints",
+      ref: "Paint",
       type: mongoose.Schema.Types.ObjectId
     }
   ]
 });
 
-const Miniature = mongoose.model("User", MiniatureSchema);
+const Miniature = mongoose.model("Miniature", MiniatureSchema);
 
 module.exports = Miniature;

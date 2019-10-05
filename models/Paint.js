@@ -6,6 +6,6 @@ const PaintSchema = new mongoose.Schema({
   color: String
 });
 
-const Paint = mongoose.model("User", PaintSchema);
+const Paint = mongoose.model("Paint", PaintSchema);
 
 module.exports = Paint;
