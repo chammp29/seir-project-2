@@ -6,8 +6,22 @@ const User = require("../models/User");
 const Miniature = require("../models/Miniature");
 const Paint = require("../models/Paint");
 
+router.delete("/:id", (req, res) => {
+  Miniature.findOneAndRemove({ _id: req.params.id }).then(() => {
+    res.redirect("/miniatures/");
+  });
+});
+
 router.post("/", (req, res) => {
   Miniature.create(req.body).then(newMini => {
+    res.redirect("/miniatures/");
+  });
+});
+
+router.put("/:id", (req, res) => {
+  Miniature.findOneAndUpdate({ _id: req.params.id }, req.body, {
+    new: true
+  }).then(mini => {
     res.redirect("/miniatures/");
   });
 });
@@ -15,6 +29,12 @@ router.post("/", (req, res) => {
 router.get("/", (req, res) => {
   Miniature.find({}).then(miniatures => {
     res.render("miniatures", { miniatures });
+  });
+});
+
+router.get("/edit/:id", (req, res) => {
+  Miniature.findOne({ _id: req.params.id }).then(miniature => {
+    res.render("edit-mini", { miniature });
   });
 });
 

@@ -1,0 +1,14 @@
+<h2>Edit Mini:</h2>
+
+<form action="/miniatures/{{miniature.id}}?_method=put" method="post">
+
+    <label>Mini Title:</label>
+    <textarea class="title" type="text" name="title">{{miniature.title}}</textarea>
+
+    <input type="submit" value="Update">
+
+</form>
+
+<form action="/miniatures/{{miniature.id}}?_method=delete" method="post">
+    <input type="submit" value="Delete">
+</form>

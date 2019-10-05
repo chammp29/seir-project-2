@@ -1,0 +1,14 @@
+<h2>Edit Paint:</h2>
+
+<form action="/paints/{{paint.id}}?_method=put" method="post">
+
+    <label>Paint Name:</label>
+    <textarea class="title" type="text" name="name">{{paint.name}}</textarea>
+
+    <input type="submit" value="Update">
+
+</form>
+
+<form action="/paints/{{paint.id}}?_method=delete" method="post">
+    <input type="submit" value="Delete">
+</form>
