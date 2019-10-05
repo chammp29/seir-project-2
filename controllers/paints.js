@@ -12,4 +12,10 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/:id", (req, res) => {
+  Paint.findOne({ _id: req.params.id }).then(paint => {
+    res.render("show-paint", paint);
+  });
+});
+
 module.exports = router;

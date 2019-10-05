@@ -12,4 +12,10 @@ router.get("/", (req, res) => {
   });
 });
 
+router.get("/:id", (req, res) => {
+  Miniature.findOne({ _id: req.params.id }).then(mini => {
+    res.render("show-mini", mini);
+  });
+});
+
 module.exports = router;
