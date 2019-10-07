@@ -32,7 +32,7 @@ router.get("/", (req, res) => {
   });
 });
 
-router.get("/edit/:id", (req, res) => {
+router.get("/edit/:id/", (req, res) => {
   Miniature.findOne({ _id: req.params.id }).then(miniature => {
     res.render("edit-mini", { miniature });
   });

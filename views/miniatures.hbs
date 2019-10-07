@@ -1,11 +1,15 @@
-<h1>Corey's Minis</h1>
+<div class="header">
+    <button><a href="/users/">Home</a></button>
+    <h1>My Projects</h1>
+    <button><a href="/miniatures/new">New Project</a></button>
+</div>
 
 <ul>
     {{#each miniatures}}
     <li>
+        <img src="{{this.image}}" width="10%">
+        <br>
         <a href="/miniatures/{{this.id}}">{{this.title}}</a>
     </li>
     {{/each}}
 </ul>
-
-<button><a href="/miniatures/new">Add new</a></button>

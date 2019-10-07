@@ -4,6 +4,8 @@ const MiniatureSchema = new mongoose.Schema({
   title: String,
   image: String,
   notes: String,
+  mfr: String,
+  game: String,
   category: [],
   paintedBy: [
     {

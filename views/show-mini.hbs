@@ -1,6 +1,14 @@
-<img src="{{image}}" width="50%">
-<h2>{{title}}</h2>
-<p>{{notes}}</p>
+<div class="header">
+    <button><a href="/miniatures/">Projects</a></button>
+    <h1>{{title}}</h1>
+    <button><a href="/miniatures/edit/{{id}}">Edit</a></button>
+</div>
 
-<button><a href="/miniatures/edit/{{id}}">Edit</a></button>
-<button><a href="/miniatures/">Home</a></button>
+<img src="{{image}}" width="50%">
+<p>{{mfr}}</p>
+<p>{{game}}</p>
+
+<div class="notes">
+    <label>Notes:</label>
+    {{notes}}
+</div>

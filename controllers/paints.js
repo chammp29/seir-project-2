@@ -22,7 +22,7 @@ router.put("/:id", (req, res) => {
   Paint.findOneAndUpdate({ _id: req.params.id }, req.body, {
     new: true
   }).then(paint => {
-    res.redirect("/paints/");
+    res.redirect(`/paints/${paint.id}`);
   });
 });
 

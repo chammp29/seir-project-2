@@ -6,4 +6,8 @@ const User = require("../models/User");
 const Miniature = require("../models/Miniature");
 const Paint = require("../models/Paint");
 
+router.get("/", (req, res) => {
+  res.render("index");
+});
+
 module.exports = router;

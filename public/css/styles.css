@@ -1,0 +1,28 @@
+body {
+  text-align: center;
+  width: 25em;
+  margin: 0 auto;
+}
+
+form {
+  max-width: 20em;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  color: red;
+}
+
+.title {
+  color: red;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.notes {
+  display: grid;
+  row-gap: 10px;
+  padding: 10px;
+}
