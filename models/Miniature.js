@@ -3,9 +3,6 @@ const mongoose = require("../db/connection");
 const MiniatureSchema = new mongoose.Schema({
   title: String,
   image: String,
-  description: String,
-  mfr: String,
-  material: String,
   notes: String,
   category: [],
   paintedBy: [

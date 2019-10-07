@@ -22,7 +22,7 @@ router.put("/:id", (req, res) => {
   Miniature.findOneAndUpdate({ _id: req.params.id }, req.body, {
     new: true
   }).then(mini => {
-    res.redirect("/miniatures/");
+    res.redirect(`/miniatures/${mini.id}`);
   });
 });
 

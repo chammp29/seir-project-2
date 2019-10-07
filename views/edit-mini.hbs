@@ -3,25 +3,16 @@
 <form action="/miniatures/{{miniature.id}}?_method=put" method="post">
 
     <label>Title:</label>
-    <input type="text" name="title" value="{{miniature.title}}" id="">
+    <textarea type="text" name="title">{{miniature.title}}</textarea>
 
-
-    <img src="{{miniature.image}}">
-
-    <label>Description:</label>
-    <input type="text" name="description" value="{{miniature.description}}" id="">
-
-    <label>Made by:</label>
-    <input type="text" name="mfr" value="{{miniature.mfr}}" id="">
-
-    <label>Material:</label>
-    <input type="text" name="material" value="{{miniature.material}}" id="">
+    <label>Image:</label>
+    <textarea type="text" name="image">{{miniature.image}}</textarea>
 
     <label>Notes:</label>
-    <input type="text" name="notes" value="{{miniature.notes}}" id="">
+    <textarea type="text" name="notes">{{miniature.notes}}</textarea>
 
-    <label>Category:</label>
-    <input type="text" name="category" value="{{miniature.category}}" id="">
+    <label>Categories:</label>
+    <textarea type="text" name="category">{{miniature.category}}</textarea>
 
     <input type="submit" value="Update">
 
@@ -30,3 +21,5 @@
 <form action="/miniatures/{{miniature.id}}?_method=delete" method="post">
     <input type="submit" value="Delete">
 </form>
+
+<button><a href="/miniatures/{{miniature.id}}">Cancel</a></button>
