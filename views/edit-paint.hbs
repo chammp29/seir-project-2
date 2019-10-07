@@ -1,4 +1,8 @@
-<h2>Edit Paint:</h2>
+<div class="header">
+    <button><a href="/paints/{{paint.id}}">Back</a></button>
+    <h1>Edit Paint:</h1>
+
+</div>
 
 <form action="/paints/{{paint.id}}?_method=put" method="post">
 
@@ -18,5 +22,3 @@
 <form action="/paints/{{paint.id}}?_method=delete" method="post">
     <input type="submit" value="Delete">
 </form>
-
-<button><a href="/paints/{{paint.id}}">Cancel</a></button>

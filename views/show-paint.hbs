@@ -1,8 +1,13 @@
-<h2>{{name}}</h2>
+<div class="header">
+    <button><a href="/paints/">Paints</a></button>
+    <h1>{{name}}</h1>
+    <button><a href="/paints/edit/{{id}}">Edit</a></button>
+</div>
+
 <p>{{mfr}}</p>
 <p>{{color}}</p>
-<p>{{notes}}</p>
 
-
-<button><a href="/paints/edit/{{id}}">Edit</a></button>
-<button><a href="/paints/">Home</a></button>
+<div class="notes">
+    <label>Notes:</label>
+    {{notes}}
+</div>
