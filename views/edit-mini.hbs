@@ -2,8 +2,26 @@
 
 <form action="/miniatures/{{miniature.id}}?_method=put" method="post">
 
-    <label>Mini Title:</label>
-    <textarea class="title" type="text" name="title">{{miniature.title}}</textarea>
+    <label>Title:</label>
+    <input type="text" name="title" value="{{miniature.title}}" id="">
+
+
+    <img src="{{miniature.image}}">
+
+    <label>Description:</label>
+    <input type="text" name="description" value="{{miniature.description}}" id="">
+
+    <label>Made by:</label>
+    <input type="text" name="mfr" value="{{miniature.mfr}}" id="">
+
+    <label>Material:</label>
+    <input type="text" name="material" value="{{miniature.material}}" id="">
+
+    <label>Notes:</label>
+    <input type="text" name="notes" value="{{miniature.notes}}" id="">
+
+    <label>Category:</label>
+    <input type="text" name="category" value="{{miniature.category}}" id="">
 
     <input type="submit" value="Update">
 
