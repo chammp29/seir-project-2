@@ -3,7 +3,11 @@
 <form action="/paints/{{paint.id}}?_method=put" method="post">
 
     <label>Paint Name:</label>
-    <textarea class="title" type="text" name="name">{{paint.name}}</textarea>
+    <textarea type="text" name="name">{{paint.name}}</textarea>
+    <label>Made by:</label>
+    <textarea type="text" name="mfr">{{paint.mfr}}</textarea>
+    <label>Color:</label>
+    <textarea type="text" name="color">{{paint.color}}</textarea>
 
     <input type="submit" value="Update">
 
@@ -12,3 +16,5 @@
 <form action="/paints/{{paint.id}}?_method=delete" method="post">
     <input type="submit" value="Delete">
 </form>
+
+<button><a href="/paints/{{paint.id}}">Cancel</a></button>
