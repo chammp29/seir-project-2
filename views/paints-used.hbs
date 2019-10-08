@@ -1,0 +1,30 @@
+<div class="header">
+    <div class="nav"><a href="/miniatures/edit/{{miniature.id}}">Back</a></div>
+    <h1>{{miniature.title}}</h1>
+</div>
+
+<ul>
+    {{#each paints }}
+    <li>
+
+        <form action="/miniatures/paintsused/{{../miniature.id}}?_method=put" method="post">
+
+            <input type="submit" name="{{this.id}}" value="{{this.name}}">
+
+        </form>
+
+    </li>
+    {{/each}}
+</ul>
+
+
+<div class="paints-used">
+    <label>Paints Used:</label>
+    <p>
+        {{#each miniature.paintsUsed}}
+
+        {{name}},
+
+        {{/each}}
+    </p>
+</div>

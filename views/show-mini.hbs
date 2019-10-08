@@ -11,9 +11,19 @@
     <p><label>Played in:</label>{{game}}</p>
 </div>
 
+<div class="paints-used">
+    <label>Paints Used:</label>
+    <p>
+        {{#each paintsUsed}}
 
-{{!-- <div class="notes"> --}}
+        {{name}},
+
+        {{/each}}
+    </p>
+
+
+</div>
+
 <label>Notes:</label>
 <br>
 {{notes}}
-{{!-- </div> --}}

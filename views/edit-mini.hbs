@@ -1,7 +1,7 @@
 <div class="header">
     <a href="/miniatures/{{miniature.id}}">Back</a>
     <h1>Edit Project:</h1>
-
+    <a href="/miniatures/paintsused/{{miniature.id}}">Add Paints</a>
 </div>
 
 <form action="/miniatures/{{miniature.id}}?_method=put" method="post">
@@ -14,6 +14,15 @@
     <input type="text" name="mfr" value="{{miniature.mfr}}">
     <label>Game:</label>
     <input type="text" name="game" value="{{miniature.game}}">
+
+    <label>Paints Used:</label>
+    <p>
+        {{#each miniature.paintsUsed}}
+
+        {{name}},
+
+        {{/each}}
+    </p>
 
     <label>Notes:</label>
     <textarea type="text" name="notes">{{miniature.notes}}</textarea>

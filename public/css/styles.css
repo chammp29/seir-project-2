@@ -82,6 +82,18 @@ img {
   align-self: center;
 }
 
+.home-btn {
+  background-color: #333;
+  border: none;
+  color: #fff;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 100px auto;
+}
+
 /* .mfr-game {
   margin: 0 auto;
   display: flex;
