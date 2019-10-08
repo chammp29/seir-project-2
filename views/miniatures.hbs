@@ -1,13 +1,14 @@
 <div class="header">
-    <button><a href="/users/">Home</a></button>
+    <div class="nav"><a href="/users/">Home</a></div>
     <h1>My Projects</h1>
-    <button><a href="/miniatures/new">New Project</a></button>
+    <div class="nav"><a href="/miniatures/new">New Project</a></div>
+
 </div>
 
 <ul>
     {{#each miniatures}}
     <li>
-        <img src="{{this.image}}" width="10%">
+        <img class="thumbnail" src="{{this.image}}" width="10%">
         <br>
         <a href="/miniatures/{{this.id}}">{{this.title}}</a>
     </li>

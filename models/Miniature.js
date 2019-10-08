@@ -1,11 +1,11 @@
 const mongoose = require("../db/connection");
 
 const MiniatureSchema = new mongoose.Schema({
-  title: String,
-  image: String,
-  notes: String,
-  mfr: String,
-  game: String,
+  title: { type: String, default: "" },
+  image: { type: String, trim: true, default: "" },
+  notes: { type: String, default: "" },
+  mfr: { type: String, default: "" },
+  game: { type: String, default: "" },
   category: [],
   paintedBy: [
     {

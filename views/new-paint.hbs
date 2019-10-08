@@ -1,17 +1,20 @@
-<h2>New Paint:</h2>
+<div class="header">
+    <a href="/paints/">Paints</a>
+    <h1>New Paint:</h1>
+</div>
 
 <form action="/paints/" method="post" accept-charset="utf-8">
-    <p>
-        <label>Name:</label>
-        <input type="text" name="name">
-        <label>Made by:</label>
-        <input type="text" name="mfr">
-        <label>Color:</label>
-        <input type="text" name="color">
-        <label>Notes:</label>
-        <textarea type="text" name="notes"></textarea>
-    </p>
+
+    <label>Name:</label>
+    <input type="text" name="name">
+    <label>Made by:</label>
+    <input type="text" name="mfr">
+    <label>Color:</label>
+    <input type="text" name="color">
+    <label>Notes:</label>
+    <textarea type="text" name="notes"></textarea>
+
     <input type="submit" value="Create">
 </form>
 
-<button><a href="/paints/">Cancel</a></button>
+<a href="/paints/">Cancel</a>

@@ -1,5 +1,5 @@
 <div class="header">
-    <button><a href="/paints/{{paint.id}}">Back</a></button>
+    <a href="/paints/{{paint.id}}">Back</a>
     <h1>Edit Paint:</h1>
 
 </div>
@@ -7,11 +7,11 @@
 <form action="/paints/{{paint.id}}?_method=put" method="post">
 
     <label>Paint Name:</label>
-    <textarea type="text" name="name">{{paint.name}}</textarea>
+    <input type="text" name="name" value="{{paint.name}}">
     <label>Made by:</label>
-    <textarea type="text" name="mfr">{{paint.mfr}}</textarea>
+    <input type="text" name="mfr" value="{{paint.mfr}}">
     <label>Color:</label>
-    <textarea type="text" name="color">{{paint.color}}</textarea>
+    <input type="text" name="color" value="{{paint.color}}">
     <label>Notes:</label>
     <textarea type="text" name="notes">{{paint.notes}}</textarea>
 
