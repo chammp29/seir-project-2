@@ -5,12 +5,14 @@
 
 </div>
 
-<ul>
-    {{#each miniatures}}
-    <li>
-        <img class="thumbnail" src="{{this.image}}" width="10%">
-        <br>
-        <a href="/miniatures/{{this.id}}">{{this.title}}</a>
-    </li>
-    {{/each}}
-</ul>
+<div class="list-items">
+    <ul>
+        {{#each miniatures}}
+        <li>
+            <img class="thumbnail" src="{{this.image}}" width="10%">
+            <br>
+            <a href="/miniatures/{{this.id}}">{{this.title}}</a>
+        </li>
+        {{/each}}
+    </ul>
+</div>

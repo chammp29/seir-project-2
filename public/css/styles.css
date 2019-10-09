@@ -13,6 +13,7 @@ h1 {
 a {
   text-decoration: none;
   text-decoration-line: none;
+  color: #333;
 }
 
 a:visited {
@@ -92,6 +93,10 @@ img {
   display: inline-block;
   font-size: 16px;
   margin: 100px auto;
+}
+
+.list-items {
+  display: grid;
 }
 
 /* .mfr-game {
