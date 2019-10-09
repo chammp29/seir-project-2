@@ -2,12 +2,20 @@ const mongoose = require("mongoose");
 
 mongoose.Promise = Promise;
 
+let mongoURI = "";
+if (process.env.NODE_ENV === "production") {
+  mongoURI = provess.env.DB_URL;
+} else {
+  mongoURI = "mongodb://localhost/colourJournalDB";
+}
+
 mongoose.connect(
-  "mongodb://localhost/colourJournalDB",
-  { useNewUrlParser: true },
-  () => {
-    console.log("Connected to colourJournalDB");
-  }
+  mongoURI,
+  { useNewUrlParser: true }
+    .then(instance =>
+      console.log(`Connected to db: ${instance.connections[0].name}`)
+    )
+    .catch(error => console.log("Connection failed", error))
 );
 
 module.exports = mongoose;
