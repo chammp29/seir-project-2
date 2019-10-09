@@ -19,4 +19,10 @@ app.use("/users/", usersController);
 app.use("/miniatures/", miniaturesController);
 app.use("/paints/", paintsController);
 
-app.listen(5000, () => console.log("Running on port 5000"));
+// app.listen(5000, () => console.log("Running on port 5000"));
+
+app.set("port", process.env.PORT || 5000);
+
+app.listen(app.get("port"), () => {
+  console.log(`✅ PORT: ${app.get("port")} 🌟`);
+});
