@@ -15,9 +15,9 @@ app.use(parser.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.use("/public", express.static("public"));
 
-app.use("/users/", usersController);
-app.use("/miniatures/", miniaturesController);
-app.use("/paints/", paintsController);
+app.use("/", usersController);
+app.use("/miniatures", miniaturesController);
+app.use("/paints", paintsController);
 
 // app.listen(5000, () => console.log("Running on port 5000"));
 

@@ -18,6 +18,7 @@ router.post("/", (req, res) => {
   });
 });
 
+// Discuss these two blocks
 router.put("/paintsused/:id", (req, res) => {
   const paintID = Object.keys(req.body)[0];
   const miniID = req.params.id;
@@ -42,6 +43,7 @@ router.get("/paintsused/:id/", (req, res) => {
       });
     });
 });
+// End discussion
 
 router.put("/:id", (req, res) => {
   Miniature.findOneAndUpdate({ _id: req.params.id }, req.body, {
